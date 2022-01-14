@@ -1,11 +1,10 @@
-const env = process.env.NODE_ENV || 'development';
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const postcssPresets = require('postcss-preset-env');
 
+const env = process.env.NODE_ENV || 'development';
 const finalCSSLoader = (env === 'development') ? MiniCssExtractPlugin.loader : { loader: 'style-loader' };
 
 module.exports = {
@@ -15,14 +14,22 @@ module.exports = {
   devServer: {
     hot: true,
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [
           { loader: 'babel-loader' },
         ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
       },
       {
         test: /\.s?css/,

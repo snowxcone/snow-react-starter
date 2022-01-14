@@ -1,5 +1,5 @@
 # Snow's react starter woot woot
-Starter build for React single page app 
+Starter build for React TypeScript single page app
 
 NOTES/LEARNINGS:
 - Webpack bundles up all the dependencies listed in package.json. It understands JS but needs plugins to understand other languages like HTML, CSS
