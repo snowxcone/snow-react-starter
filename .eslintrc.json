@@ -60,11 +60,10 @@
         "react-hooks/exhaustive-deps": "warn",
         "react/prop-types": "off"
     },
-    // Prevent no-var-requires on js files. Referenced https://github.com/Shopify/eslint-plugin-shopify/issues/159
     "overrides": [
         {
             "files": [
-                "*.js"
+                "webpack.config.ts"
             ],
             "rules": {
                 "@typescript-eslint/no-var-requires": "off"

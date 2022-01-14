@@ -1,7 +1,9 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const autoprefixer = require('autoprefixer');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ESLintPlugin from 'eslint-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import autoprefixer from 'autoprefixer';
+
+// Using require to avoid installing the type definition as it has several npm vulnerabilities 
 const postcssPresets = require('postcss-preset-env');
 
 const env = process.env.NODE_ENV || 'development';
