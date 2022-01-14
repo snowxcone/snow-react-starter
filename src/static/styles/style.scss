@@ -1,0 +1,32 @@
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, #b9dfec 0%, #399ebd 40%, #05b2ec 100%);
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container {
+  background-image: url('../images/clouds.png');
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+}
+
+.logo {
+  background-image: url('../images/coco.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: yellow 0.5rem solid;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  margin: 5% auto;
+}
+
+#main {
+  color: black;
+  font-size: 2rem;
+  height: 100%;
+}
